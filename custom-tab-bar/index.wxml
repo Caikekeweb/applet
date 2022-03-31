@@ -1,0 +1,15 @@
+<view class="tab-bar tab-bar-bottom" style='background: {{backgroundColor}}'>
+	<view class="tab-bar-item" wx:for="{{list}}" wx:key="index" data-path="{{item.pagePath}}" data-index="{{index}}"
+		bindtap="switchTab">
+		<view class="flex-center">
+			<image class="tab-bar-item-image {{ index === 2 ? 'image-hide' : '' }}"
+				src="{{ selected === index ? item.selectedIconPath : item.iconPath}}"></image>
+			<view wx:if="{{ index === 2 }}" class="bigitem">
+				<image class="tab-bar-item-image" src="{{ selected === index ? item.selectedIconPath : item.iconPath}}"></image>
+			</view>
+			<view class='tab-bar-item-text'
+				style="font-size: {{fontSize}}rpx;color: {{selected === index ? selectedColor : color}}">{{item.text}}</view>
+		</view>
+
+	</view>
+</view>

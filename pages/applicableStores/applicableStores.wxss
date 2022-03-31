@@ -1,0 +1,55 @@
+.applicable-stores {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  background: #F5F5F5;
+}
+
+.cu-bar {
+  background: #353A47 !important;
+}
+
+.action {
+  color: #fff;
+}
+
+.nav-title {
+  color: #fff;
+}
+
+.section {
+  width: 710rpx;
+  margin: 20rpx;
+  background: #fff;
+  background-size: contain;
+  border-radius: 10rpx;
+  position: relative;
+  padding: 30rpx 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+
+.flex-box {
+  flex: 1;
+  margin-right: 50rpx;
+}
+
+.section-title {
+  font-size: 32rpx;
+  font-weight: 500;
+  color: #333333;
+  margin-bottom: 30rpx;
+}
+
+.section-address {
+  font-size: 24rpx;
+  font-weight: 500;
+  color: #999999;
+}
+
+.phone-box {
+  width: 60rpx;
+  height: 60rpx;
+}

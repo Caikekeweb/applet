@@ -1,0 +1,73 @@
+<view class="membership-interests">
+  <cu-custom isBack="{{ true }}">
+    <text class="nav-title" slot="content">会员权益</text>
+  </cu-custom>
+  <view class="card-box">
+    <swiper class="card-swiper" current="{{ cardCur }}" bindchange="cardSwiper">
+      <swiper-item wx:for="{{swiperList}}" wx:key="index" class="{{cardCur==index?'cur':''}}">
+        <view class="swiper-item" style="background-image: url({{item.url}});">
+          <view class="info-box">
+            <view class="avatar-box">
+              <image class="avatar" src="{{ avatar }}" mode="aspectFill"></image>
+              <view class="avatar-lock" wx:if="{{cust_type < item.id }}">
+                <text class="cuIcon-lock"></text>
+              </view>
+            </view>
+            <view>
+              <text wx:if="{{cust_type < item.id }}" class="nickname {{ item.id === '03' && 'colorWhite' }}">待解锁</text>
+              <text class="nickname {{ item.id === '03' && 'colorWhite' }}">{{nickname}}</text>
+              <view class="vip-grade {{ item.id === '03' && 'colorWhite' }}">{{ item.gradeName }}</view>
+            </view>
+          </view>
+
+          <view class="progress">
+            <text wx:if="{{item.id !== '03' && accnt.czz >= item.upgradeCzz}}">
+              <text class="{{ item.id === '01' ? 'color1' : 'color2' }}" wx:if="{{ cust_type <= item.id }}">等级已达到升级标准，次日生效</text>
+              <text class="{{ item.id === '01' ? 'color1' : 'color2' }}" wx:else>您已超越该等级</text>
+            </text>
+            <block wx:if="{{cust_type === item.id && cust_type !== '03' && accnt.czz < item.upgradeCzz}}">
+              <view class="flex-box">
+                <text class="text1 {{ item.id === '03' && 'colorWhite' }}">{{accnt.czz}}/{{ item.upgradeCzz }}</text>
+                <text class="text2 {{ item.id === '03' && 'colorWhite' }}">还差{{item.upgradeCzz - accnt.czz}}消费额升级</text>
+              </view>
+              <view class="cu-progress round">
+                <view class="cur-percent" style="width: {{ percentage + '%' }};"></view>
+              </view>
+            </block>
+            <text class="top-class" wx:if="{{item.id === '03' && accnt.czz >= item.needCzz}}">您已达到最高会员等级</text>
+          </view>
+        </view>
+      </swiper-item>
+    </swiper>
+  </view>
+  <view class="title-box">
+    <text class="title-text">{{ swiperList[cardCur].gradeName }}尊享4大特权</text>
+  </view>
+
+  <view class="function-box">
+    <view class="function-item" bindtap="switchTab" data-index="{{ index }}" wx:for="{{interestsList}}" wx:key="index">
+      <view class="iconbox">
+        <image src="{{ index == curTab ? item.iconActive : item.icon }}"></image>
+        <view class="small-lock" hidden="{{ !isLocked }}"><text class="cuIcon-lock"></text></view>
+      </view>
+      <text class="function-name">{{ item.name }}</text>
+    </view>
+  </view>
+
+  <view class="explain-box">
+    <view class="explain-title">权益说明<text class="dotted"></text>{{ interestsList[curTab].name }}</view>
+    <image class="title-img" src="https://szhy.szdutyfree.com.cn/applet/image/interests_title_line.png" mode="heightFix"></image>
+    <block wx:if="{{ curTab == 0 }}">
+      <view class="explain-content">{{ jfData.Dbjf }}</view>
+    </block>
+    <block wx:if="{{ curTab == 1 }}">
+      <view class="explain-content">{{ jfData.Srjf }}</view>
+    </block>
+    <block wx:if="{{ curTab == 2 }}">
+      <view class="explain-content">{{ jfData.Jfdx }}</view>
+    </block>
+    <block wx:if="{{ curTab == 3 }}">
+      <view class="explain-content">{{ jfData.Srly }}</view>
+    </block>
+  </view>
+</view>

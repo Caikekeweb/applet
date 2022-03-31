@@ -1,0 +1,22 @@
+<view class="top-selling-list">
+  <cu-custom isBack="{{true}}">
+    <text class="nav-title" slot="content">热销榜单</text>
+  </cu-custom>
+  <image class="activity-img" src="https://szhy.szdutyfree.com.cn/applet/image/activity1.png" mode="widthFix"></image>
+  <scroll-view scroll-x class="bg-white nav" scroll-with-animation scroll-left="{{scrollLeft}}">
+    <view class="cu-item {{index==TabCur && 'tab-active'}}" wx:for="{{tablist}}" wx:key="index" bindtap="tabSelect"
+      data-id="{{index}}">
+      {{ item.name }}
+    </view>
+  </scroll-view>
+  <scroll-view class="item-box" scroll-y>
+    <view class="goods-item" wx:for="{{ tablist[TabCur].goods }}" wx:key="index">
+      <image class="goods-img" mode="widthFix" src="{{ item.imgurl }}"></image>
+      <view class="flex-box">
+        <view class="goods-title">{{ item.title }}</view>
+        <view class="goods-subtitle">{{ item.subTitle }}</view>
+        <button class="btn-buy" bindtap="purchaseGoods" data-index="{{index}}" >购买</button>
+      </view>
+    </view>
+  </scroll-view>
+</view>

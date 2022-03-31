@@ -1,0 +1,80 @@
+.tab-bar {
+  width: 100%;
+  background: #353A47;
+  display: flex;
+  background-position: center center;
+  background-size: 100% 100%;
+  /*兼容 IOS<11.2*/
+  padding-bottom: constant(safe-area-inset-bottom);
+  /*兼容 IOS>11.2*/
+  padding-bottom: env(safe-area-inset-bottom);
+  padding-top: 14rpx;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.tab-bar-border {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 1rpx;
+  background: #f6f6f6;
+  box-shadow: 0 -1px 3px 1px #f6f6f6;
+}
+
+.tab-bar-item {
+  position: relative;
+  flex: 1;
+  text-align: center;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+
+.flex-center {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 20rpx;
+}
+
+.tab-bar-item-image {
+  width: 44rpx;
+  height: 44rpx;
+}
+
+.image-hide {
+  opacity: 0;
+}
+
+.tab-bar-item-text {
+  font-size: 20rpx;
+  z-index: 99;
+  margin-top: 12rpx;
+}
+.bigitem {
+  background: linear-gradient(0deg, #E6B785, #F6D8B3);
+  border-radius: 50%;
+  position: absolute;
+  top: -50rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 78rpx;
+  height: 78rpx;
+  border: 8rpx solid #353A47;
+  box-sizing: content-box;
+}
+
+.bigitem .tab-bar-item-image {
+  width: 78rpx;
+  height: 78rpx;
+}

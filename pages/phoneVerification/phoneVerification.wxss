@@ -1,0 +1,177 @@
+.phone-verification {
+  color: #333;
+  width: 100vw;
+  min-height: 100vh;
+  background: #fff;
+}
+
+.title {
+  font-size: 36rpx;
+  font-weight: 500;
+  color: #333333;
+  text-align: center;
+  margin-top: 120rpx;
+  margin-bottom: 102rpx;
+}
+
+.form-row {
+  width: 560rpx;
+  height: 75rpx;
+  border-bottom: 1px solid #e6e6e6;
+  padding-bottom: 33rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  margin: 0 auto;
+}
+
+.hasmargin {
+  margin-top: 50rpx;
+}
+
+.phone-input {
+  flex: 1;
+  font-size: 32rpx;
+  font-weight: 500;
+  color: #000000;
+  margin-left: 32rpx;
+}
+
+.placeholder {
+  color: #B3B3B3;
+  font-size: 32rpx;
+}
+
+.get-verify-btn {
+  background: unset;
+  padding: 0;
+  margin: 0;
+  font-size: 28rpx;
+  color: #BD2820;
+  border: 0;
+}
+
+.get-verify-btn::after {
+  border: 0;
+}
+
+.verify-code-input {
+  flex: 1;
+  font-size: 32rpx;
+  font-weight: 500;
+  color: #000000;
+}
+
+.sign-btn {
+  width: 560rpx;
+  height: 88rpx;
+  border-radius: 44rpx;
+  font-size: 36rpx;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 80rpx;
+}
+
+.loading-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50rpx;
+  height: 50rpx;
+  margin-right: 10rpx;
+}
+
+.cuIcon-loading2 {
+  font-size: 50rpx;
+}
+
+.tip {
+  font-size: 24rpx;
+  font-weight: 500;
+  color: #999999;
+  text-align: center;
+  margin-top: 50rpx;
+}
+
+.close-btn {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 90rpx;
+  line-height: 90rpx;
+  background: rgba(189, 40, 32, 0.5);
+  color: #fff;
+  font-size: 32rpx;
+  border-radius: 0;
+}
+
+.modal-box {
+  width: 640rpx;
+  height: 790rpx;
+  background: #FFFFFF;
+  border-radius: 24rpx;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 50rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+.modal-title {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #1A1A1A;
+  text-align: center;
+}
+
+.scroll-box {
+  height: 434rpx;
+  margin: 50rpx 0;
+}
+
+.terms-content {
+  font-size: 28rpx;
+  font-family: PingFang SC;
+  color: #333333;
+  line-height: 42rpx;
+  text-align: left;
+}
+
+.blod {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #1A1A1A;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+
+.btn {
+  width: 240rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  background: #AAAAAA;
+  border-radius: 40rpx;
+  font-size: 32rpx;
+  font-weight: 500;
+  text-align: center;
+  color: #fff;
+}
+
+.btn-active {
+  margin-left: 40rpx;
+  background: #BA261E;
+}

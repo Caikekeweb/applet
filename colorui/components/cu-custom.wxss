@@ -1,0 +1,14 @@
+/* colorui/components/cu-custom.wxss */
+.cu-custom {
+  z-index: 999;
+}
+.content {
+  font-size: 36rpx;
+  color: #333;
+  font-weight: bold;
+  z-index: 999;
+}
+
+.cu-bar {
+  background: #fff;
+}

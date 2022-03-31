@@ -1,0 +1,24 @@
+<view class="address">
+  <cu-custom isBack="true">
+    <text class="nav-title" slot="content">收货地址</text>
+  </cu-custom>
+  <scroll-view wx:if="{{dataList.length}}" class="address-list">
+    <radio-group class="radio-group">
+        <label wx:for="{{dataList}}" wx:key="index">
+          <view class="data-item">
+            <!-- <radio class="red-radio" value="{{index}}" checked="{{ item.isdefault === 'Y' }}" /> -->
+            <view class="box-center">
+              <view class="address-text"><text class="tag" wx:if="{{item.isdefault === 'Y'}}">默认</text> {{item.address}}</view>
+              <view class="detail">{{ item.steet }}</view>
+              <view>{{ item.contact }} {{item.mobile}}</view>
+            </view>
+            <text catchtap="toEdit" data-index="{{index}}" class="cuIcon-edit"></text>
+          </view>
+        </label>
+    </radio-group>
+  </scroll-view>
+  <view class="no-address" wx:else>
+    <image src="{{ imgOrigin + 'no-address.png' }}"></image>
+  </view>
+  <button class="btn-add" bindtap="toAdd"><text class="cuIcon-add"></text>  新增收货地址</button>
+</view>

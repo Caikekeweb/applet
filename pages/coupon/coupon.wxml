@@ -1,0 +1,55 @@
+<view class="coupon" style="padding-top: {{ CustomBar - 6 }}px">
+  <view class="fixed">
+    <cu-custom isBack="true">
+      <text class="nav-title" slot="content">领券中心</text>
+    </cu-custom>
+  </view>
+
+  <view class="voucher {{ item.isRobbedAll && 'disabled' }}" wx:for="{{ datalist }}" wx:key="index">
+    <view class="box-top">
+      <view class="flex-left">
+        <view class="center-title">{{ item.coupon_name }}</view>
+        <view class="date">有效期: {{ item.validity_sdate }}至{{ item.validity_edate }}</view>
+      </view>
+      <view class="flex-right">
+        <view class="amount">
+          <text wx:if="{{ item.promotion_type_code === '01' }}">￥</text>
+          {{ item.facevalue }}
+          <text wx:if="{{ item.promotion_type_code === '02' }}">折</text>
+        </view>
+        <view class="coupon-type">{{ item.promotion_type_name }}券</view>
+      </view>
+    </view>
+
+    <view class="box-bottom">
+      <view class="flex-box">
+        <view class="rule-name" bindtap="toggleFold" data-index="{{ index }}">
+          使用规则：<text>{{item.simple_usage_rule}}</text>
+          <text class="cuicon cuIcon-{{ item.isFold ? 'fold': 'unfold'}}"></text>
+        </view>
+        <view wx:if="{{item.status === 'N'}}" class="count-down-box">
+          <view class="text">距开抢还剩</view>
+          <view class="second-box">
+            <view class="small-box">{{ item.hour }}</view>:
+            <view class="small-box">{{ item.minute }}</view>:
+            <view class="small-box">{{ item.second }}</view>
+          </view>
+        </view>
+        <button wx:elif="{{ item.status === 'Y' }}" class="fetch-btn" bindtap="sunscribe"
+          data-index="{{ index }}">立即领取</button>
+        <text class="has-get" wx:elif="{{item.isGet}}">已领取</text>
+        <view wx:elif="{{ item.isRobbedAll }}" class="robbed-all">已抢光</view>
+      </view>
+      <block wx:if="{{item.isFold}}">
+        <view wx:if="{{item.simple_usage_desc}}" class="pre-title margin-top">使用描述: {{ item.simple_usage_desc }}</view>
+        <view wx:if="{{item.accnt_market_txt}}" class="pre-title margin-top">适用门店：{{ item.accnt_market_txt }}</view>
+      </block>
+    </view>
+    <view class="logo"></view>
+  </view>
+
+  <view class="no-data" wx:if="{{ !loading && datalist.length === 0 }}">
+    <image src="{{ imgOrigin + 'no-quan.png' }}" mode="widthFix"></image>
+    <view class="no-data-tip">暂无可领取优惠券</view>
+  </view>
+</view>

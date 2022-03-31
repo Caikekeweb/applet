@@ -1,0 +1,35 @@
+<!--pages/integralRule/integralRule.wxml-->
+<view class="integral-rule">
+  <cu-custom isBack="true">
+    <text class="nav-title" slot="content">积分规则</text>
+  </cu-custom>
+  <view class="content-box">
+    <view class="top-tip">您在深圳免税旗下免税店(参见适用门店)购物时，提供会员卡或手机号并完成付款后，将自动累积相应积分。</view>
+    <view class="section">
+      <view class="section-title">
+        <view class="icon-xuhao">1</view>积分累计规则
+      </view>
+      <view class="section-content">
+        <view>① 消费产生的积分以1分为最小单位，每消费满1元RMB累积1分；</view>
+        <view>② 会员每笔积分自产生之日起1个自然年内有效，逾期自动清零。</view>
+      </view>
+    </view>
+    <view class="section">
+      <view class="section-title">
+        <view class="icon-xuhao">2</view>积分消耗和使用
+      </view>
+      <view class="section-content">
+        <view>积分当钱花：会员在结算时，可以积分抵扣一定金额，100积分等于1元RMB。</view>
+      </view>
+    </view>
+    <view class="section">
+      <view class="section-title">
+        <view class="icon-xuhao">3</view>退货积分处理
+      </view>
+      <view class="section-content">
+        退货商品所对应积分将在退货后，从现有积分中扣除，如积分不足，须以现金补足后，方可退货。
+      </view>
+    </view>
+    <view class="footer-tip">注：部分商品不支持积分抵扣，详询各门店，最终解释权归深圳免税所有</view>
+  </view>
+</view>

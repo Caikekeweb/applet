@@ -1,0 +1,56 @@
+.member-purchase {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  background: #171921;
+  padding-top: 140rpx;
+  padding-bottom: 180rpx;
+}
+
+.fixed {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 99;
+  background: #171921;
+}
+
+.cu-bar {
+  background: #353A47 !important;
+}
+
+.action {
+  color: #fff;
+}
+
+.nav-title {
+  color: #fff;
+}
+
+.section {
+  width: 690rpx;
+  height: 240rpx;
+  margin: 30rpx;
+  background: #fff;
+  background-size: contain;
+  border-radius: 18rpx;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: row;
+}
+
+.text-box {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.35);
+  font-size: 32rpx;
+  font-weight: 500;
+  color: #FFFFFF;
+}

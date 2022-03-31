@@ -1,0 +1,13 @@
+<view class="applicable-stores">
+  <cu-custom isBack="true">
+    <text class="nav-title" slot="content">适用门店</text>
+  </cu-custom>
+
+  <view class="section" wx:for="{{dataList}}" wx:key="index">
+    <view class="flex-box">
+      <view class="section-title">{{ item.StoreName }}</view>
+      <view class="section-address">{{ item.StoreAddress }}</view>
+    </view>
+    <image class="phone-box" bindtap="callPhone" data-index="{{ index }}" src="{{ iconPhone }}" mode="widthFix"></image>
+  </view>
+</view>

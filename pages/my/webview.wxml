@@ -1,0 +1,2 @@
+<!--pages/my/webview.wxml-->
+<web-view src="{{ url }}"></web-view>

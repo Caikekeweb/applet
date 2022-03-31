@@ -1,0 +1,300 @@
+.coupon {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  background: #171921;
+  padding-top: 120rpx;
+  padding-bottom: 50rpx;
+}
+
+.fixed {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}
+
+.cu-bar {
+  background: #353A47 !important;
+}
+
+.action {
+  color: #fff;
+}
+
+.nav-title {
+  color: #fff;
+}
+
+.voucher {
+  width: 710rpx;
+  margin: 40rpx 20rpx;
+  background: #3C4150 url(https://szhy.szdutyfree.com.cn/applet/image/coupon_bg.png) no-repeat left top;
+  background-size: contain;
+  border-radius: 18rpx;
+  position: relative;
+  padding: 10rpx 0 23rpx;
+}
+
+.voucher::before {
+  content: '';
+  width: 14rpx;
+  height: 28rpx;
+  background-color: #171921;
+  border-radius: 0 20rpx 20rpx 0;
+  position: absolute;
+  left: 0;
+  top: 175rpx;
+}
+
+.voucher::after {
+  content: '';
+  width: 14rpx;
+  height: 28rpx;
+  background-color: #171921;
+  border-radius: 20rpx 0 0 20rpx;
+  position: absolute;
+  right: 0;
+  top: 175rpx;
+}
+
+.logo {
+  width: 129rpx;
+  height: 30rpx;
+  background: url(https://szhy.szdutyfree.com.cn/applet/image/coupon_logo.png) no-repeat center;
+  background-size: contain;
+  position: absolute;
+  left: 12rpx;
+  top: -6rpx;
+}
+
+.box-top {
+  width: 100%;
+  height: 180rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+
+.flex-left {
+  flex: 1;
+  padding-left: 30rpx;
+}
+
+.center-title {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #FFFFFF;
+}
+
+.date {
+  font-size: 20rpx;
+  font-weight: 500;
+  color: #FFFFFF;
+  opacity: 0.4;
+  margin-top: 20rpx;
+}
+
+.flex-right {
+  width: 185rpx;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.box-left {
+  width: 156rpx;
+  height: 100%;
+  border-right: 1rpx dashed rgba(220, 221, 227, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.amount {
+  font-size: 54rpx;
+  font-family: DIN;
+  font-weight: 500;
+  color: #F1DBB3;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-direction: row;
+  line-height: 1;
+}
+
+.amount text {
+  font-size: 28rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: #F1DBB3;
+  margin: 0 3rpx 6rpx;
+}
+
+.coupon-type {
+  font-size: 22rpx;
+  font-weight: 500;
+  color: #FFFFFF;
+  opacity: 0.6;
+  margin-bottom: 14rpx;
+}
+
+.box-bottom {
+  border-top: 2rpx dashed rgba(255, 255, 255, 0.6);
+  margin: 0 20rpx;
+  padding-top: 23rpx;
+}
+
+.flex-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+
+.rule-name {
+  font-size: 20rpx;
+  font-weight: 500;
+  color: #FFFFFF;
+  opacity: 0.6;
+}
+
+.pre-title {
+  font-size: 20rpx;
+  font-weight: 500;
+  color: #FFFFFF;
+  opacity: 0.6;
+  margin: 10rpx 0;
+}
+
+.pre-content {
+  font-size: 20rpx;
+  font-weight: 500;
+  color: #FFFFFF;
+  opacity: 0.6;
+  margin-bottom: 20rpx;
+}
+
+.cuicon {
+  margin-left: 6rpx;
+}
+
+.fetch-btn {
+  width: 130rpx;
+  height: 46rpx;
+  line-height: 46rpx;
+  background: linear-gradient(0deg, #E8C594, #FAF0D1);
+  border-radius: 23rpx;
+  font-size: 24rpx;
+  color: #3F4256;
+  padding: 0;
+  margin: 0;
+}
+
+.disabled {
+  background: url(https://szhy.szdutyfree.com.cn/applet/image/coupon_disable_bg.png) no-repeat center;
+  background-size: cover;
+}
+
+.disabled .logo {
+  background: url(https://szhy.szdutyfree.com.cn/applet/image/coupon_disable_logo.png) no-repeat center;
+  background-size: contain;
+}
+
+.disabled .box-left .amount {
+  color: #FFFFFF;
+  opacity: 0.6;
+}
+
+.disabled .box-center .center-title {
+  color: #FFFFFF;
+  opacity: 0.6;
+}
+
+.has-get {
+  width: 130rpx;
+  height: 46rpx;
+  line-height: 46rpx;
+  background: linear-gradient(0deg, #E8C594, #FAF0D1);
+  opacity: 0.9;
+  border-radius: 23rpx;
+  text-align: center;
+  font-size: 24rpx;
+  font-weight: bold;
+  color: #3F4256;
+}
+
+.count-down-box {
+  position: relative;
+}
+
+.count-down-box .text {
+  font-size: 22rpx;
+  font-weight: 500;
+  color: #F5DEA4;
+  line-height: 33rpx;
+}
+
+.second-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  font-size: 24rpx;
+  font-weight: 500;
+  color: #F1DBB3;
+  margin-top: 18rpx;
+}
+
+.second-box .small-box {
+  width: 28rpx;
+  height: 28rpx;
+  line-height: 28rpx;
+  background: #F1DBB3;
+  border-radius: 4rpx;
+  font-size: 18rpx;
+  font-weight: 500;
+  color: #3F4256;
+  text-align: center;
+  margin: 0 4rpx;
+}
+
+.robbed-all {
+  width: 130rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align: center;
+  background: rgb(255, 255, 255, 0.3);
+  border-radius: 25rpx;
+  font-size: 24rpx;
+  font-weight: bold;
+  color: rgb(255, 255, 255, 0.5);
+}
+
+.no-data {
+  margin: 180rpx auto 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.no-data image {
+  width: 200rpx;
+}
+
+.no-data-tip {
+  font-size: 28rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #999999;
+  line-height: 20rpx;
+  margin-top: 40rpx;
+  white-space: nowrap;
+}

@@ -1,0 +1,84 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/perfectInformation/perfectInformation",
+    "pages/phoneVerification/phoneVerification",
+    "pages/memberRule/memberRule",
+    "pages/applicableStores/applicableStores",
+    "pages/topSellingList/topSellingList",
+    "pages/outlyingIslands/outlyingIslands",
+    "pages/invitationCode/invitationCode",
+    "pages/membershipHandbook/membershipHandbook",
+    "pages/integralRule/integralRule",
+    "pages/integralCenter/integralCenter",
+    "pages/couponDetail/couponDetail",
+    "pages/coupon/coupon",
+    "pages/storeActivities/storeActivities",
+    "pages/cardVoucher/cardVoucher",
+    "pages/my/my",
+    "pages/memberCode/memberCode",
+    "pages/memberPurchase/memberPurchase",
+    "pages/willBeFree/willBeFree",
+    "pages/personalMsg/personalMsg",
+    "pages/credentialManagement/credentialManagement",
+    "pages/credentialDetail/credentialDetail",
+    "pages/membershipInterests/membershipInterests",
+    "pages/willBeFree/webView",
+    "pages/address/address",
+    "pages/address/edit",
+    "pages/my/webview"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "深免会员",
+    "navigationStyle": "custom",
+    "navigationBarTextStyle": "white"
+  },
+  "usingComponents": {
+    "custom-tab-bar": "/custom-tab-bar/index",
+    "cu-custom": "/colorui/components/cu-custom",
+    "common-head": "components/common-head/common-head",
+    "cilcleProgress": "components/cilcleProgress/cilcleProgress",
+    "login-mask": "components/login-mask/login-mask"
+  },
+  "tabBar": {
+    "custom": true,
+    "color": "#666",
+    "selectedColor": "#fff",
+    "backgroundColor": "#333",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "image/tab_icon_home.png",
+        "selectedIconPath": "image/tab_icon_home_selected.png"
+      },
+      {
+        "pagePath": "pages/memberPurchase/memberPurchase",
+        "text": "深免购物圈",
+        "iconPath": "image/tab_icon_vip.png",
+        "selectedIconPath": "image/tab_icon_vip_selected.png"
+      },
+      {
+        "pagePath": "pages/memberCode/memberCode",
+        "text": "会员码",
+        "iconPath": "image/tab_icon_code.png",
+        "selectedIconPath": "image/tab_icon_code.png"
+      },
+      {
+        "pagePath": "pages/willBeFree/willBeFree",
+        "text": "发现深免",
+        "iconPath": "image/tab_icon_found.png",
+        "selectedIconPath": "image/tab_icon_found_selected.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "image/tab_icon_info.png",
+        "selectedIconPath": "image/tab_icon_info_selected.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

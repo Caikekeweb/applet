@@ -1,0 +1,24 @@
+.membership-handbook {
+  width: 100%;
+  font-size: 0;
+  background: #000;
+}
+
+.membership-handbook image {
+  width: 100%;
+}
+
+.cu-custom {
+  position: fixed;
+  left: 0;
+  right: 0;
+}
+
+.cu-bar {
+  background: transparent !important;
+  z-index: 99;
+}
+
+.action {
+  color: #fff;
+}

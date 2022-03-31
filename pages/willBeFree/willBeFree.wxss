@@ -1,0 +1,98 @@
+.card-voucher {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  background: #171921;
+  padding-top: 240rpx;
+  padding-bottom: 200rpx;
+}
+
+.fixed {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 99;
+  background-color: #353A47;
+}
+
+.cu-bar {
+  background: #353A47 !important;
+}
+
+.action {
+  color: #fff;
+}
+
+.nav-title {
+  color: #fff;
+}
+
+.tab-box {
+  width: 100%;
+  height: 100rpx;
+  background: #353A47;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.tab {
+  flex: 1;
+  line-height: 100rpx;
+  height: 100%;
+  font-size: 28rpx;
+  font-weight: 500;
+  color: #fff;
+  position: relative;
+  text-align: center;
+}
+
+.tab-active {
+  color: #FFE4C1;
+}
+
+.tab-active::before {
+  content: "";
+  width: 112rpx;
+  height: 4rpx;
+  background: #FFE4C1;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+}
+
+.card-box {
+  width: 100%;
+  margin: 30rpx 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: row;
+}
+
+.card-box .box-section {
+  width: 360rpx;
+}
+
+.card-box .box-section:nth-child(2) {
+  margin-left: 10rpx;
+}
+
+.card {
+  width: 100%;
+  background: #fff;
+  border-radius: 10rpx;
+  margin-top: 10rpx;
+  overflow: hidden;
+}
+
+.card-text {
+  font-size: 28rpx;
+  font-weight: 500;
+  color: #333333;
+  line-height: 42rpx;
+  padding: 24rpx 20rpx;
+}

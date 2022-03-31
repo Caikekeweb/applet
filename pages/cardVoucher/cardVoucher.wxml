@@ -1,0 +1,52 @@
+<view class="card-voucher" style="padding-top: {{ CustomBar + 49 }}px">
+  <view class="fixed">
+    <cu-custom isBack="true">
+      <text class="nav-title" slot="content">我的卡券</text>
+    </cu-custom>
+    <view class="tab-box">
+      <view class="tab {{ curStatus === item.status && 'tab-active' }}" bindtap="switchTab" wx:for="{{tabList}}" data-index="{{ index }}" wx:key="index">
+          {{ item.name }}
+      </view>
+    </view>
+  </view>
+ 
+  <view data-index="{{ index }}" class="voucher {{ curStatus !== '01' && 'disabled' }}" wx:for="{{ datalist }}" wx:key="index">
+    <view class="box-top">
+      <view class="flex-left">
+        <view class="center-title">{{ item.coupon_name }}</view>
+        <view class="date">有效期: {{ item.eff_date }}至{{ item.exp_date }}</view>
+      </view>
+      <view class="flex-right">
+        <view class="amount">
+          <text wx:if="{{ item.promotion_type_code === '01' }}">￥</text>
+          {{ item.facevalue }}
+          <text wx:if="{{ item.promotion_type_code === '02' }}">折</text>
+        </view>
+        <view class="coupon-type">{{ item.promotion_type_name }}券</view>
+      </view>
+    </view>
+
+    <view class="box-bottom">
+      <view class="flex-box">
+        <view class="rule-name" bindtap="toggleFold" data-index="{{ index }}">
+          使用规则：<text>{{item.simple_usage_rule}}</text>
+          <text wx:if="{{item.simple_usage_desc || item.accnt_market_txt}}" class="cuicon cuIcon-{{ item.isFold ? 'fold': 'unfold'}}"></text>
+        </view>
+        <button wx:if="{{ curStatus === '01' }}" class="fetch-btn" bindtap="navigateTo" data-index="{{ index }}">立即使用</button>
+        <button wx:if="{{ curStatus === '02' }}" class="fetch-btn">已使用</button>
+        <button wx:if="{{ curStatus === '03' }}" class="fetch-btn">已过期</button>
+      </view>
+      <block wx:if="{{item.isFold}}">
+        <view wx:if="{{item.simple_usage_desc}}" class="pre-title">使用描述：{{ item.simple_usage_desc }}</view>
+        <view wx:if="{{item.simple_usage_desc}}" class="pre-content"></view>
+        <view wx:if="{{item.accnt_market_txt}}" class="pre-title margin-top">适用门店：{{ item.accnt_market_txt }}</view>
+      </block>
+    </view>
+    <view class="logo"></view>
+  </view>
+
+  <view class="no-data" hidden="{{ loading || datalist.length !== 0 }}">
+    <image src="{{ imgOrigin + 'no-quan.png' }}" mode="widthFix"></image>
+    <view class="no-data-tip">暂无{{ curStatusName }}优惠券</view>
+  </view>
+</view>

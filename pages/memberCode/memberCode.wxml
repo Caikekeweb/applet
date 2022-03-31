@@ -1,0 +1,19 @@
+<!--pages/memberCode/memberCode.wxml-->
+<view class="member-code">
+  <cu-custom>
+    <text class="nav-title" slot="content">会员码</text>
+  </cu-custom>
+  <view class="board">
+    <view class="logo-box">
+      <image src="https://szhy.szdutyfree.com.cn/applet/image/logo.jpg" mode="widthFix"></image>
+    </view>
+    <text class="tip">结算前请出示会员码</text>
+    <image src="{{msgInfo.barcodeBase64}}" class="barcode"></image>
+    <text class="card-number">{{ barcodeTxt }}</text>
+    <image class="qrcode-box" src="{{msgInfo.qrcodeBase64}}"></image>
+    <view class="refresh-tip">
+      <text> <text class="cuIcon-refresh"></text> 每10秒自动更新</text>
+    </view>
+  </view>
+  <login-mask model:visible="{{ visible }}" bind:cancel="goBack" isCheckLogin="{{ true }}"></login-mask>
+</view>

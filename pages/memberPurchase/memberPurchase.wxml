@@ -1,0 +1,10 @@
+<view class="member-purchase"  style="padding-top: {{ CustomBar + 10 }}px">
+  <view class="fixed">
+    <cu-custom >
+      <text class="nav-title" slot="content">深免购物圈</text>
+    </cu-custom>
+  </view>
+ 
+  <view class="section" wx:for="{{dataList}}" bindtap="goDetail" data-index="{{ index }}" wx:key="index" style="background-image: url('{{ item.ImagePath }}')">
+  </view>
+</view>

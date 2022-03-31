@@ -1,0 +1,13 @@
+<view class="store-activity">
+  <cu-custom isBack="true">
+    <text class="nav-title" slot="content">门店活动</text>
+  </cu-custom>
+
+  <view class="section" bindtap="goPage" data-url="{{ item.Url }}" wx:for="{{dataList}}" wx:key="index">
+    <image src="{{ item.ImagePath }}" class="image-box" mode="aspectFill"></image>
+    <view class="flex-box">
+      <view class="section-title">{{ item.Title }}</view>
+      <view class="section-subtitle">{{ item.SubTitle }}</view>
+    </view>
+  </view>
+</view>

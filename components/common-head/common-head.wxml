@@ -1,0 +1,5 @@
+<!--components/custom-head.wxml-->
+<view class="common-head" >
+<view class="lg text-gray cuIcon-back" ></view>
+{{ title }}
+</view>

@@ -1,0 +1,57 @@
+.store-activity {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  background: #F5F5F5;
+  padding-bottom: 120rpx;
+}
+
+.section {
+  width: 710rpx;
+  height: 220rpx;
+  margin: 20rpx;
+  background: #fff;
+  background-size: contain;
+  border-radius: 18rpx;
+  position: relative;
+  padding: 30rpx 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+}
+
+.image-box {
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 10rpx;
+  margin-right: 40rpx;
+  background-color: #fafafa;
+}
+
+.flex-box {
+  flex: 1;
+}
+
+.section-title {
+  font-size: 32rpx;
+  font-weight: 500;
+  color: #333333;
+}
+
+.section-subtitle {
+  margin-top: 10rpx;
+  color: #666;
+  font-size: 24rpx;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.section-store-name {
+  font-size: 24rpx;
+  font-weight: 500;
+  color: #999999;
+  margin-top: 20rpx;
+}

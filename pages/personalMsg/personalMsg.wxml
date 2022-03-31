@@ -1,0 +1,48 @@
+<!--pages/personalMsg/personalMsg.wxml-->
+<view class="personal-msg">
+  <cu-custom isBack="true">
+    <text class="nav-title" slot="content">个人信息</text>
+  </cu-custom>
+  <view class="section">
+    <view class="flex-row border-bottom">
+      <text>头像</text>
+      <button class="avatar-wrapper" open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar">
+        <image class="avatar" mode="aspectFill" src="{{avatar}}"></image>
+      </button> 
+    </view>
+    <view class="flex-row border-bottom">
+      <text>昵称</text>
+      <input type="text" bindblur="setNickname" value="{{nickname}}" maxlength="10" placeholder="请输入昵称 "></input>
+    </view>
+    <view class="flex-row border-bottom">
+      <text>姓名</text>
+      <text>{{ cmname }}</text>
+    </view>
+    <view class="flex-row border-bottom">
+      <text>性别</text>
+      <text>{{ cmsex }}</text>
+    </view>
+    <view class="flex-row border-bottom">
+      <text>生日</text>
+      <text>{{ cmbirthday }}</text>
+    </view>
+  </view>
+  <view class="section">
+    <view class="flex-row border-bottom">
+      <text>手机号</text>
+      <text>{{ mobile }}</text>
+    </view>
+    <view class="flex-row border-bottom" bindtap="toCredential">
+      <text>证件管理</text>
+      <text class="cuIcon-right"></text>
+    </view>
+    <view class="flex-row border-bottom" bindtap="toAddress">
+      <text>地址管理</text>
+      <text class="cuIcon-right"></text>
+    </view>
+  </view>
+
+  <view class="tip">温馨提示</view>
+  <view class="tip-txt">一经提交无法任意修改，如需修改请联系客服。 </view>
+  <view class="tip-txt">客服电话: <text>4006188333</text></view>
+</view>

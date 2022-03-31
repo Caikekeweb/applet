@@ -1,0 +1,14 @@
+<view class="cilcle-progress {{ isReceive && 'received' }} {{ disabled && 'disabled' }}">
+  <view class="wrapper">
+    <view class="left-wrapper">
+      <view class="left-mask" style="transform: rotate({{leftRotate}}deg);"></view>
+    </view>
+    <view class="right-wrapper">
+      <view class="right-mask" style="transform: rotate({{rightRotate}}deg);"></view>
+    </view>
+    <view class="center-board">
+      <view>{{ isReceive ? '已领取' : '已领'}}</view>
+      <view wx:if="{{ !isReceive }}">{{ percent }}%</view>
+    </view>
+  </view>
+</view>

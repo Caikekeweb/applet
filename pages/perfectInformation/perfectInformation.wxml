@@ -1,0 +1,66 @@
+<view class="perfect-information">
+  <cu-custom isBack="{{!isRegistered}}">
+    <text class="nav-title" slot="content">完善信息</text>
+  </cu-custom>
+  <view class="section">
+    <view class="flex-row border-bottom">
+      <text>头像</text>
+      <button class="avatar-wrapper" open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar">
+        <image class="avatar" mode="aspectFill" src="{{avatarUrl}}"></image>
+      </button> 
+    </view>
+    <view class="flex-row">
+      <text>昵称</text>
+      <input type="text" bindinput="setInput" data-key="nickname" value="{{nickname}}" maxlength="18" placeholder="请输入昵称 "></input>
+    </view>
+  </view>
+  <view class="section">
+    <view class="flex-row border-bottom">
+      <text>证件类型</text>
+      <text>身份证</text>
+    </view>
+    <view class="flex-row">
+      <text>证件号码</text>
+      <input type="text" bindinput="idCardInput" maxlength="18" placeholder="请输入您的证件号码 "></input>
+    </view>
+  </view>
+  <view class="section">
+    <view class="flex-row border-bottom">
+      <text>姓名</text>
+      <input type="text" bindinput="setInput" data-key="cmname" placeholder="请输入真实姓名"></input>
+    </view>
+    <view class="flex-row border-bottom">
+      <text>英文名</text>
+      <input type="text" bindinput="setInput" data-key="cmnickname" placeholder="请输入拼音/英文名"></input>
+    </view>
+    <view class="flex-row border-bottom">
+      <text>生日</text>
+      <picker wx:if="{{ cardType != 'idcard' }}" mode="date" value="{{birthday}}" bindchange="bindDateChange">
+        <text wx:if="{{birthdayTxt}}">{{birthdayTxt}}</text>
+        <view wx:else class="placeholder">YYYY年MM月DD日</view>
+      </picker>
+      <view wx:else>
+        <text wx:if="{{birthdayTxt}}">{{birthdayTxt}}</text>
+        <view wx:else class="placeholder">YYYY年MM月DD日</view>
+      </view>
+    </view>
+    <view class="flex-row">
+      <text>性别</text>
+      <view class="radio-group">
+        <view class="radio-label" wx:for="{{sexGroup}}" wx:key="index" data-value="{{ item.value }}" bindtap="choseSex">
+          <view class="radio {{ sex === item.value && 'radio-checked' }}"></view>
+          <text class="label-text">{{ item.name }}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <button class="btn-submit {{ loading ? 'btn-active' : 'btn-normal' }}" bindtap="submit">
+    <view class="loading-box" wx:if="{{loading}}">
+      <text class="cuIcon-loading2 iconfont-spin"></text>
+    </view>
+    提交
+  </button>
+  <navigator wx:if="{{isRegistered}}" open-type="switchTab" url="../../pages/home/home" class="jump">
+    跳过
+  </navigator>
+</view>

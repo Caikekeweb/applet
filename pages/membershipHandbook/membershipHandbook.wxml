@@ -1,0 +1,9 @@
+<!--pages/membershipHandbook/membershipHandbook.wxml-->
+<view class="membership-handbook">
+  <cu-custom isBack="true"></cu-custom>
+  <image src="https://szhy.szdutyfree.com.cn/applet/image/vip-handbook1.png" mode="widthFix"></image>
+  <image src="https://szhy.szdutyfree.com.cn/applet/image/vip-handbook2.png" mode="widthFix"></image>
+  <image src="https://szhy.szdutyfree.com.cn/applet/image/vip-handbook3.png" mode="widthFix"></image>
+  <image src="https://szhy.szdutyfree.com.cn/applet/image/vip-handbook4.png" mode="widthFix"></image>
+  <image src="https://szhy.szdutyfree.com.cn/applet/image/vip-handbook5.png" mode="widthFix"></image>
+</view>

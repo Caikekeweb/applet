@@ -1,0 +1,21 @@
+<view class="card-voucher" style="padding-top: {{ CustomBar - 6 }}px">
+  <view class="fixed">
+    <cu-custom>
+      <text class="nav-title" slot="content">发现深免</text>
+    </cu-custom>
+  </view>
+  <view class="card-box">
+    <view class="box-section">
+      <view class="card" wx:for="{{ leftList }}" wx:key="index" bindtap="toDetail" data-url="{{ item.Url }}">
+        <image src="{{ item.ImagePath }}" mode="widthFix"></image>
+        <view class="card-text">{{ item.Title }}</view>
+      </view>
+    </view>
+    <view class="box-section">
+      <view class="card" wx:for="{{ rightList }}" wx:key="index" bindtap="toDetail" data-url="{{ item.Url }}">
+        <image src="{{ item.ImagePath }}" mode="widthFix"></image>
+        <view class="card-text">{{ item.Title }}</view>
+      </view>
+    </view>
+  </view>
+</view>

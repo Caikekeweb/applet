@@ -1,0 +1,18 @@
+<view class="invitation-code">
+  <cu-custom isBack="true">
+    <text class="nav-title" slot="content">邀请码</text>
+  </cu-custom>
+  <view class="board">
+    <view class="white-box">
+      <view class="border-box">
+        <text class="title">您的邀请码为</text>
+        <text class="big-code">{{ inviteCode }}</text>
+        <button class="btn-copy" bindtap="copyText">复制</button>
+        <text class="tip">好友也可在注册时直接填写邀请码</text>
+        <view class="line"></view>
+        <image src="{{ appletCodePath }}" mode="widthFix" class="applet-code-box"></image>
+        <button class="btn-recommend" bindtap="shareImg" >推荐好友</button>
+      </view>
+    </view>
+  </view>
+</view>

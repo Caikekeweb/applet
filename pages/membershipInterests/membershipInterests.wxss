@@ -1,0 +1,278 @@
+.membership-interests {
+  width: 100vw;
+  min-height: 100vh;
+  background: #171921 url(https://szhy.szdutyfree.com.cn/applet/image/bg_info.png?202211030) no-repeat;
+  background-size: 100% 540rpx;
+  padding-bottom: 120rpx;
+}
+
+.cu-bar {
+  background: unset !important;
+}
+
+.action {
+  color: #fff;
+}
+
+.nav-title {
+  color: #fff;
+}
+
+.info-box {
+  margin-top: 28rpx;
+  margin-left: 30rpx;
+  display: flex;
+  justify-content: flex-start;
+  align-self: center;
+  flex-direction: row;
+}
+
+.avatar-box {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  display: inline-block;
+  margin-right: 30rpx;
+  position: relative;
+}
+
+.avatar {
+  width: 100%;
+  height: 100%;
+}
+
+.avatar-lock {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.8);
+  border: 4rpx solid #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 99;
+}
+
+.avatar-lock .cuIcon-lock {
+  font-size: 40rpx;
+  color: #fff;
+}
+
+.nickname {
+  font-size: 32rpx;
+  color: #7C4115;
+  font-weight: 500;
+}
+
+.vip-grade {
+  font-size: 20rpx;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: #7C4115;
+  opacity: 0.8;
+}
+
+.colorWhite {
+  color: #FBEFDB !important;
+}
+
+.card-box {
+  background-image: url(https://szhy.szdutyfree.com.cn/applet/image/card_bottom.png);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: left 310rpx;
+}
+
+.swiper-item {
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.progress {
+  position: absolute;
+  left: 30rpx;
+  right: 30rpx;
+  bottom: 40rpx;
+}
+
+.flex-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+
+.text1 {
+  font-size: 22rpx;
+  color: #7C3F0E;
+}
+
+.text2 {
+  font-size: 22rpx;
+  color: #8D6533;
+}
+
+.cu-progress {
+  background-color: rgba(110, 77, 30, 0.2);
+  height: 8rpx;
+}
+
+.cur-percent {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.title-box {
+  text-align: center;
+  background: url(https://szhy.szdutyfree.com.cn/applet/image/vip_line_title.png) no-repeat center center;
+  background-size: contain;
+  width: 634rpx;
+  margin: 18rpx auto 50rpx;
+}
+
+.title-text {
+  font-weight: 500;
+  color: transparent;
+  font-size: 32rpx;
+  text-align: center;
+  background-image: linear-gradient(-90deg, #C3A16C, #E2CDA3);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.function-box {
+  margin: 0 52rpx 30rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border-radius: 12rpx;
+}
+
+.function-item {
+  width: 95rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  white-space: nowrap;
+  margin-right: 50rpx;
+}
+
+.function-item:nth-of-type(4n) {
+  margin-right: 0;
+}
+
+.function-name {
+  font-size: 28rpx;
+  font-weight: 500;
+  color: #EECE99;
+}
+
+.iconbox {
+  width: 90rpx;
+  height: 90rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 28rpx;
+  position: relative;
+}
+
+.small-lock {
+  width: 28rpx;
+  height: 28rpx;
+  background: #4C4D54;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.small-lock  .cuIcon-lock {
+  color: #E0CA9F;
+  font-size: 13rpx;
+}
+
+.explain-box {
+  width: 690rpx;
+  height: 614rpx;
+  margin: 40rpx 30rpx;
+  background-color: rgba(0, 0, 0, 0.1);
+  background-image: url(https://szhy.szdutyfree.com.cn/applet/image/interests_border.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  padding: 50rpx 20rpx;
+  border-radius: 10rpx;
+  position: relative;
+}
+
+.explain-title {
+  font-size: 28rpx;
+  font-weight: 500;
+  color: #FDE3B2;
+  margin-bottom: 20rpx;
+  text-align: center;
+}
+
+.title-img {
+  width: 250rpx;
+  height: 24rpx;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 30rpx;
+}
+
+.dotted {
+  display: inline-block;
+  width: 8rpx;
+  height: 8rpx;
+  background: #FDE3B2;
+  border-radius: 50%;
+  margin: 0 12rpx;
+  position: relative;
+  top: -2rpx;
+}
+
+.flex-row {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: row;
+}
+
+.flex-text {
+  flex: 1;
+  margin-left: 10rpx;
+}
+
+.explain-content {
+  font-size: 24rpx;
+  font-weight: 400;
+  color: #E2D7C2;
+  line-height: 46rpx;
+  padding-left: 11rpx;
+}
+
+.color1 {
+  color: '#7c3f0e'
+}
+.color2 {
+  color: '#ae4d28'
+}
+
+.top-class {
+  color: rgba(255, 255, 255, 0.4);
+}

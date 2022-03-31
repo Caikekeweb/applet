@@ -1,0 +1,45 @@
+@import "colorui/main.wxss";
+@import "colorui/icon.wxss";
+
+.nav-title {
+  font-size: 36rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: #333333;
+}
+
+.btn-disable {
+  background: #DE938F;
+}
+
+.btn-normal {
+  background: #BD2820;
+}
+
+.btn-active {
+  background: #97201A;
+}
+
+.text-red {
+  color: #BD2820;
+}
+
+.text-gray {
+  color: #666;
+}
+
+.custom-head-white {
+  background: #fff;
+}
+
+.common-footer-tip {
+  text-align: center;
+  color: #ccc;
+}
+
+.common-login-btn {
+  padding: 0;
+  display: inline;
+  margin: 0;
+  background: transparent;
+}

@@ -1,0 +1,72 @@
+<!--pages/my/my.wxml-->
+<view class="my">
+
+  <cu-custom>
+    <text class="nav-title" slot="content">个人中心</text>
+  </cu-custom>
+  <view class="card-box">
+    <swiper class="card-swiper" bindchange="cardSwiper" current="{{ cardCur }}">
+      <swiper-item wx:for="{{swiperList}}" wx:key="index" class="{{cardCur==index?'cur':''}}">
+        <view class="swiper-item" style="background-image: url({{item.url}});">
+          <view class="info-box">
+            <view class="avatar-box">
+              <image class="avatar" src="{{ avatar }}" mode="aspectFill"></image>
+              <view class="avatar-lock" wx:if="{{cust_type < item.id }}">
+                <text class="cuIcon-lock"></text>
+              </view>
+            </view>
+            <view>
+              <text wx:if="{{cust_type < item.id }}" class="nickname {{ item.id === '03' && 'colorWhite' }}">待解锁</text>
+              <text class="nickname {{ item.id === '03' && 'colorWhite' }}">{{nickname}}</text>
+              <view class="vip-grade {{ item.id === '03' && 'colorWhite' }}">{{ item.gradeName }}</view>
+            </view>
+          </view>
+
+          <view class="progress">
+            <text wx:if="{{item.id !== '03' && cust_type > item.id}}">
+              <text class="{{ item.id === '01' ? 'color1' : 'color2' }}">您已超越该等级</text>
+            </text>
+            <block wx:if="{{cust_type === item.id && cust_type !== '03'}}">
+              <view class="flex-box">
+                <text class="text1 {{ item.id === '03' && 'colorWhite' }}">{{accnt.czz}}/{{ item.upgradeCzz }}</text>
+                <text wx:if="{{ accnt.czz < item.upgradeCzz}}"
+                  class="text2 {{ item.id === '03' && 'colorWhite' }}">还差{{item.upgradeCzz - accnt.czz}}消费额升级</text>
+                <text class="text2 {{ item.id === '01' ? 'color1' : 'color2' }}" wx:else>等级已达到升级标准，次日生效</text>
+              </view>
+              <view class="cu-progress round">
+                <view class="cur-percent" style="width: {{ percentage + '%' }};"></view>
+              </view>
+            </block>
+            <text class="top-class" wx:if="{{cust_type === '03' && item.id === '03'}}">您已达到最高会员等级</text>
+          </view>
+        </view>
+      </swiper-item>
+    </swiper>
+  </view>
+  <view class="title-box">
+    <text class="title-text">我的服务</text>
+  </view>
+
+  <view class="function-box">
+    <block wx:for="{{funs}}" wx:key="index">
+      <view bindtap="navigatePage" wx:if="{{item.display}}" data-index="{{ index }}" class="function-item" >
+        <view class="iconbox">
+          <image src="{{ item.icon }}"></image>
+        </view>
+        <text class="function-name">{{ item.name }}</text>
+      </view>
+    </block>
+  </view>
+
+  <view class="customer-service" wx:if="{{ customerVisible }}">
+    <view class="customer-service-board">
+      <text class="cuIcon-close" bindtap="toggleCustomer"></text>
+      <text class="title">i免税客服电话</text>
+      <text class="phone-number">{{customPhone}}</text>
+      <button bindtap="callPhone" class="call-btn">立即拨打</button>
+      <image class="customer-qrcode" src="{{ customQrcode }}" mode="widthFix" show-menu-by-longpress="true"></image>
+      <text class="code-tip">扫码添加客服微信二维码咨询</text>
+    </view>
+  </view>
+  <login-mask model:visible="{{ visible }}" isCheckLogin="{{ isCheckLogin }}"></login-mask>
+</view>

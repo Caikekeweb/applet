@@ -1,0 +1,94 @@
+.personal-msg {
+  width: 100vw;
+  min-height: 100vh;
+  background: #F5F5F5;
+}
+
+.section {
+  margin: 20rpx;
+  background: #fff;
+  border-radius: 12rpx;
+  padding: 0 20rpx;
+}
+
+.flex-row {
+  height: 100rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  box-sizing: content-box;
+}
+.flex-row text {
+  font-size: 28rpx;
+  color: #333;
+  font-weight: 500;
+}
+
+.flex-row input {
+  font-size: 28rpx;
+  color: #999;
+  font-weight: 500;
+  text-align: right;
+}
+
+.flex-row text:nth-child(2) {
+  color: #999;
+}
+
+.avatar-wrapper {
+  margin: 0;
+  padding: 0;
+  width: 60rpx;
+  height: 60rpx;
+  border: 0;
+  outline: 0;
+  background: transparent;
+}
+
+.avatar-wrapper .avatar {
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.login-box {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.tip {
+  font-size: 24rpx;
+  font-weight: 500;
+  color: #333333;
+  margin-top: 50rpx;
+  margin-left: 20rpx;
+  margin-bottom: 16rpx;
+}
+
+.tip-txt {
+  font-size: 24rpx;
+  font-weight: 500;
+  color: #999999;
+  line-height: 40rpx;
+  margin-left: 20rpx;
+}
+
+.finish-btn {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) ;
+}
+
+switch::after {
+  display: none !important;
+}
+switch::before {
+  display: none !important;
+}

@@ -1,0 +1,29 @@
+<!--pages/couponDetail/couponDetail.wxml-->
+<view class="coupon-detail">
+  <cu-custom isBack="true">
+    <text class="nav-title" slot="content">优惠券详情</text>
+  </cu-custom>
+  <view class="board">
+    <view class="top-box">
+      <view class="image-box">
+        <image src="https://szhy.szdutyfree.com.cn/applet/image/logo.jpg" mode="widthFix"></image>
+      </view>
+      <view class="flex-box">
+        <view class="coupon-name">{{ msgInfo.coupon_name }}</view>
+        <view class="coupon-date">有效期：{{ msgInfo.eff_date }}-{{ msgInfo.exp_date }}</view>
+      </view>
+    </view>
+    <view class="center-box">
+      <text class="tip">出示前请与收银员确认要核销的商品</text>
+      <image class="barcode-box" src="{{ codeInfo.barcodeBase64 }}"></image>
+      <text bindtap="toggleCodeStaus" class="code">{{ isHideCode ? msgInfo.codeHideTxt : msgInfo.qrcode }}</text>
+      <image class="qrcode" src="{{ codeInfo.qrcodeBase64 }}" mode="aspectFill"></image>
+    </view>
+    <view class="bottom-box">
+      <view class="title">使用说明</view>
+      <rich-text class="content" nodes="{{ msgInfo.detail_usage_desc || '国家机关个阿萨德刚加上的记得是回电话覅话说得好地方大神' }}"></rich-text>
+      <view class="title margin-top">适用门店</view>
+      <rich-text class="content" nodes="{{ msgInfo.accnt_market_txt }}"></rich-text>
+    </view>
+  </view>
+</view>

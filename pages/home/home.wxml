@@ -1,0 +1,50 @@
+<!--pages/home/home.wxml-->
+<view class="home">
+  <image class="home-bg" src="{{homeBg}}" mode="widthFix"></image>
+  <view class="user-info">
+    <view class="avatarbox">
+      <image class="avatar" src="{{ avatar }}" mode="aspectFill"></image>
+      <text wx:if="{{ isRegist }}" class="nickname">{{ nickname }}</text>
+      <button open-type="getPhoneNumber" wx:else class="common-login-btn nickname" bindgetphonenumber="getPhoneNumber">登录/注册</button>
+    </view>
+    <navigator wx:if="{{isRegist }}" url="../../pages/integralCenter/integralCenter" class="nav-my-integral">我的积分：{{
+      jife }} <text class="ls cuIcon-right"></text> </navigator>
+  </view>
+  <view class="cardbox">
+    <image class="card" src="{{curGrade}}"></image>
+  </view>
+  <view class="vip-interests {{ isRegist  ? 'interests-signed' : '' }}">
+    <view class="interests-title">会员特权</view>
+    <view wx:if="{{isRegist }}" class="interests-box">
+      <navigator url="../../pages/membershipInterests/membershipInterests?tab={{ index }}" class="interests-item" dta
+        wx:for="{{interestsList}}" wx:key="index">
+        <view class="interests-icon-box">
+          <image src="{{ item.icon }}"></image>
+        </view>
+        <text class="interests-name">{{ item.name }}</text>
+      </navigator>
+    </view>
+    <view wx:else class="no-sigin-tip">登录后可查看会员权益</view>
+  </view>
+  <view class="function-box">
+    <view bindtap="funNavgate" data-index="{{ index }}" class="function-item" wx:for="{{funs}}" wx:key="index">
+      <view class="iconbox">
+        <image src="{{ item.icon }}"></image>
+      </view>
+      <text class="function-name">{{ item.name }}</text>
+    </view>
+  </view>
+  <view class="section-title">主题活动推荐</view>
+
+  <swiper class="activity-box" indicator-dots="{{true}}" circular="{{true}}" autoplay="true" interval="5000" duration="500"
+    current="activeIndex" indicator-dots="{{true}}" indicator-color="#fff" indicator-active-color="#BC2820">
+    <block wx:for="{{swiperActivityList}}" wx:key="index">
+      <swiper-item bindtap="goDetail" data-index="{{ index }}">
+        <image class="activity-imag" mode="widthFix" src="{{item.ImagePath}}"></image>
+      </swiper-item>
+    </block>
+
+  </swiper>
+  <image wx:for="{{ outActivityList }}" bindtap="goOutDetail" data-index="{{ index }}" wx:key="index" class="activity-img" mode="widthFix" src="{{item.ImagePath}}"></image>
+  <login-mask model:visible="{{ visible }}" isCheckLogin="{{ isCheckLogin }}"></login-mask>
+</view>

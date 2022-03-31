@@ -1,0 +1,48 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "分享",
+          "pathName": "pages/home/home",
+          "query": "invite_code=000001",
+          "scene": 1048
+        },
+        {
+          "name": "pages/address/address",
+          "pathName": "pages/address/address",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/home/home",
+          "pathName": "pages/home/home",
+          "query": "scene=198005",
+          "scene": null
+        },
+        {
+          "name": "pages/home/home",
+          "pathName": "pages/home/home",
+          "query": "scene=198005",
+          "scene": null
+        },
+        {
+          "name": "pages/perfectInformation/perfectInformation",
+          "pathName": "pages/perfectInformation/perfectInformation",
+          "query": "is_registered=true",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

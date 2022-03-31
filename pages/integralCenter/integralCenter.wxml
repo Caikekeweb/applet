@@ -1,0 +1,48 @@
+<view class="integral-center">
+  <cu-custom isBack="true">
+    <text class="nav-title" slot="content">积分中心</text>
+  </cu-custom>
+  <view class="user-info">
+    <view class="avatarbox">
+      <image class="avatar" src="{{ avatar }}" mode="aspectFill"></image>
+      <view>
+        <text class="nickname">{{nickname}}</text>
+        <view class="intergral">会员积分： {{ jife }}</view>
+      </view>
+
+    </view>
+    <view bindtap="toRulePage" class="integral-rule">
+      积分规则<text class="ls cuIcon-right"></text>
+    </view>
+  </view>
+
+  <view class="board">
+    <view class="board-title">积分记录</view>
+    <view class="tab-box">
+      <text bindtap="switchTab" class="tab {{ tabIndex === index && 'tab-active'  }}" wx:for="{{ tablist }}"
+        wx:key="index" data-index="{{ index }}">{{ item.tabName }}</text>
+    </view>
+    <scroll-view class="scroll-box" scroll-y bindscrolltolower="scrolltolower">
+    <block wx:for="{{ datalist }}" wx:key="index">
+      <view class="item-box" wx:if="{{ tabIndex != 3 }}">
+        <view>
+          <view class="item-name">{{ item.memo }}</view>
+          <view class="item-time">{{ item.logdate }}</view>
+        </view>
+        <text class="item-num">{{ item.amount }}</text>
+      </view>
+      <view class="item-box" wx:if="{{ tabCode == 3 }}">
+        <view>
+          <view class="item-name">{{ item.exp_date }}</view>
+        </view>
+        <text class="item-num">{{ item.balance }}</text>
+      </view>
+    </block>
+      <view class="footer-tip"></view>
+    </scroll-view>
+    <view class="no-data" hidden="{{ loading || datalist.length > 0 }}">
+      <image src="{{ imgOrigin + 'no-jifen.png' }}" mode="widthFix"></image>
+      <view class="no-data-tip">暂无{{ tablist[tabIndex].noDataTitle }}记录</view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,68 @@
+<view class="outlying-islands">
+  <cu-custom isBack="{{true}}">
+    <text class="nav-title" slot="content">离岛免税额度</text>
+  </cu-custom>
+  <view class="section">
+    <view class="title">当前账户信息</view>
+    <view class="flex-item">
+      <text>姓名</text>{{ userName }}
+    </view>
+    <view class="flex-item">
+      <text>登录账号</text>{{ zhanghao }}
+    </view>
+    <view class="flex-item">
+      <text>证件类型</text>{{ idType }}
+    </view>
+    <view class="flex-item">
+      <text>证件号</text>{{ idNo }}
+    </view>
+  </view>
+  <view class="section">
+    <view class="time">自{{timeStart}}起至{{timeEnd}}</view>
+    <view class="title">本年度离岛免税额度查询结果</view>
+    <view class="flex-box">
+      <view class="box">
+        <text class="box-num"><text>￥</text>{{ head.YearLimitLeft }}</text>
+        <text class="box-name">剩余免税额度</text>
+      </view>
+      <view class="box">
+        <text class="box-num"><text>￥</text>{{ head.YearLimitUsed }}</text>
+        <text class="box-name">已使用额度额度</text>
+      </view>
+    </view>
+    <view class="title">离岛免税限购查询结果</view>
+    <view class="table">
+      <view class="tr">
+        <view class="td">商品类型</view>
+        <view class="td">每人每次离岛限购数</view>
+        <view class="td">剩余可购买数</view>
+      </view>
+      <view class="tr" wx:for="{{ goodDetail }}" wx:key="index">
+        <view class="td">{{ item.PerLimitCategoryName }}</view>
+        <view class="td">{{ item.PerLimitAmount }}{{ item.PerLimitUnit }}</view>
+        <view class="td">
+          <view wx:if="{{!loading}}">
+            {{ item.PerLimitLeft}}
+            <text wx:if="{{ item.count !== '' }}">{{ item.PerLimitUnit }}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="tip-box">
+    <view>提示</view>
+    <view>1、2020年6月29日财政部、海关总署、税务总局联合发布《关于离岛旅客免税购物政策的公告》，自2020年7月1日起，离岛免税购物额度每年每人10万元。
+    </view>
+    <view>2、本查询结果基于会员累计消费计算得出，可能存在延迟，仅供您购物参考，请以海关系统查询为准。</view>
+  </view>
+
+  <view class="mask" wx:if="{{!isFinishInfo}}">
+    <view class="modal">
+      <view class="modal-content">请先完善个人身份信息</view>
+      <view class="modal-footer">
+        <view class="footer-btn" bindtap="toBack">取消</view>
+        <view class="footer-btn" bindtap="toFinishMsg">前往完善</view>
+      </view>
+    </view>
+  </view>
+</view>
